@@ -1,0 +1,54 @@
+<section>
+    <% if(session.cart) { %>
+    <h1 class=" cart-head text-lg font-bold ml-40 mt-50">Order Summary</h1>
+    <div class="cart-container">
+        <hr>
+        <% for(let phone of Object.values(session.cart.items)) { %>
+        <div class="flex justify-between items-center ">
+            <div class="iphone-name flex items-center">
+                <div>
+                    <img src="/img/iphone.png" alt="Iphone" height="80px" width="80px">
+                </div>
+                <div>
+                    <h3 class="font-bold text-base"><%= phone.item.name %></h3>
+                </div>
+            </div>
+            <div>
+                <p><%= phone.qty %></p>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">$ <%= phone.item.price * phone.qty %></h3>
+            </div>
+        </div>
+        <% } %>
+
+
+        <hr>
+    </div>
+
+    <div>
+        <h2 class="cart-amount font-bold text-lg">Total Amount: <span class="text-gray-600 font-bold text-xl">$ <%= session.cart.totalPrice %></span></h2>
+        <form action="">
+            <input class="address-input" type="text" placeholder="Address">
+            <div>
+                <!--<button type="submit" class="btn-primary log-in">Login to order</button>-->
+                <a><button type="submit" class="btn-primary log-in">Order Now</button></a>
+            </div>
+        </form>
+    </div>
+
+<% } else {%>
+
+
+
+
+      
+    <div class="empty-cart mt-5">
+        <h1 class="font-bold text-2xl leading-loose">Cart Empty 😔</h1>
+        <p>You Probably haven't ordered a phone yet.<br>
+        To order a phone go to main page</p>
+        <img class="mt-8" src="/img/empty-cart.png" alt="Empty">
+    </div>
+    <% } %>
+    
+</section>

@@ -1,0 +1,72 @@
+[+] Create directory structure
+[+] Create a NPM project and install all dependancies
+    - Dependancies
+        - express
+        - ejs express-ejs-layouts
+    - Dev dependancies
+        - nodemon
+[+] Create Express server - Create a server.js file
+[+] Git setup and first commit
+[+] Install Laravel Mix
+    - setup js and scss
+    - set the script inside the package.json file
+[+] Install tailwind css
+[+] Create Home page using Html and Css
+[+] Set Template engine and serve the pages
+[+] Set Assets in server.js file. so, we can import file and image directly
+[+] Create Layout file and put the navbar and footer etc.
+    - Also check the Template engine setup is above from the routes
+[+] Create Cart page
+    - order summary section
+    - empty cart section
+[+] Create logIn and register page
+[+] - move routes to routes files 
+[+] - Create dedicated controllers 
+[+] Create database and collection and import json data data
+[+] Connect mongoDB to the UI using dependancies
+    - mongoose
+[+] Create menu model and put dummy Data and export the file
+[+] Fetch all pizzas from db and show on home page
+[+] Add to cart functionality
+        - set-up the express-session and configure it
+        - store secret cookie on dotenv file
+        - to display some message, we use express-flash
+        - use connect-mongo for session store
+        - in our addToCart button we will call addEventListener and pass the dataAttribute from the click 
+            - dependancies
+                - express-session, connect-mongodb-session, dotenv, express-flash
+    - axios to send ajax request
+    - set the totalQty in the cart image section in layout
+    - install notification library npm i noty   https://ned.im/noty/#/
+[+] Show all data dynamically to the cart page
+[+] Create register page with post route
+    - setup the register page like action, method, and button type{submit}, and name in every input label
+    - than create model to store the user information in database
+    - validate request in postRegister for Not left any blank field and aready registered email
+    - and after that create a user and store the detais on database and using encrypt password
+    dependancies
+    -bcrypt
+[+] Create login page with post route 
+[+] Build register crud /* We did all the steps above */
+    - dependancies express-flash express-session dotenv
+    - status code article https://www.restapitutorial.com/httpstatuscodes.html
+[+] Build login using passport
+    - install dependancies passport passport-local express-session
+    - import on server file and configure this on the same file
+    - write the configuration of passport inside the config folder and setup the passport-local in this file
+    - setup the postLogin method in the authController
+    - set in layout file to display one Either login or register or set the logout link also
+    - also set that no one can visit login page using /login route manually. so, create a middleware guest.js
+    - create logout post method in authController
+[+] Create Order controller and link it in server.js
+[+] Create Orders view with table for customer and admin
+[+] Place order functionality
+[+] Show all my orders on custormer orders page
+[+] Show orders on admin orders page
+[+] Change order status
+[+] Create Orders single page with status
+[+] Order tracker
+    [+] Socket connection
+        - dependancies socket.io
+[+] Build project for deployment
+[+] Deploy project on live server

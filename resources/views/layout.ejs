@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Shopping</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- CSS only -->
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="left-nav ml-5 mt-2">
+                <h2 class="text-2xl font-bold">PHONE</h2>
+            </div>
+            <div class="right-nav mt-3">
+                <ul>
+                    <li class="ml-6"><a href="/">Home</a></li>
+                    <li class="ml-6"><a href="/about">About</a></li>
+                    <li class="ml-6"><a href="#products">Products</a></li>
+                    <% if(user) { %>
+                    <li class="ml-6">
+                        <form id="logout" action="/logout" method="POST">
+                            <a onclick="document.getElementById('logout').submit()" href="#">Logout</a>
+                        </form>
+                    </li>
+                    <% } else { %>
+                    <li class="ml-6"><a href="/register">Register</a></li>
+                    <li class="ml-6"><a href="/login">LogIn</a></li>
+                    <% } %>
+                </ul>
+            </div>
+            <div class="cart mt-3 mr-5 bg-slate-400 rounded-full flex">
+                <span id="cartCounter" class="counter font-bold pr-1"><%= session.cart ? session.cart.totalQty : '' %></span>
+                <a href="/cart"><img src="/img/bcart.png" alt="cart" height="25px" width="25px"></a>
+            </div>
+        </div>
+    </nav>
+
+
+    <%- body %>
+
+
+
+    <script src="/js/app.js"></script>
+</body>
+</html>

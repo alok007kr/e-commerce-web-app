@@ -1,0 +1,133 @@
+
+@import '~noty/src/noty.scss';
+@import '~noty/src/themes/mint.scss';
+
+body{
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+nav{
+    box-shadow: rgba(50,50,93,0.25) 0px 50px 100px -20px,
+    rgba(0,0,0,0.93) 0px 30px 60px -30px;
+
+}
+nav .navbar{
+    display: flex;
+    justify-content: space-between;
+}
+.right-nav ul{
+    display: flex;
+    list-style-type: none;
+}
+.right-nav ul li a:hover{
+    color: grey;
+}
+.cart{
+  background: grey;
+  border-radius: 14px;
+  padding: 3px 15px;
+}
+
+.hero{
+    height: 91vh;
+    background: #C1C7C9;
+}
+.left-hero{
+    margin-top: 10rem;
+}
+.right-hero{
+    margin-top: 2rem;
+    margin-left: 25rem;
+}
+
+.btn-primary{
+    margin-top: 3rem;
+    border: 1px solid black;
+    padding: 10px 15px;
+    color: white;
+    background: black;
+    border-radius: 5px;
+}
+.btn-primary:hover{
+    color: black;
+    background: white;
+    border: 1px solid white;
+
+}
+
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+
+  .card img{
+    height: 90px;
+    margin-left: 49px;
+  }
+  
+  .price {
+    color: black;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: 1px solid black;
+    outline: 0;
+    padding: 10px;
+    color: black;
+    background-color: #C1C7C9;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 12px;
+  }
+  
+  .card button:hover {
+    opacity: 0.6;
+  }
+
+  .empty-cart h1{
+    text-align: center;
+  }
+  .empty-cart p{
+    text-align: center;
+  }
+  .empty-cart img{
+    height: 400px;
+    width: 400px;
+    margin-left: 30rem;
+  }
+
+
+  .cart-container{
+    margin-top: 10px;
+    margin-left: 20rem;
+    margin-right: 20rem;
+  }
+  .cart-head{
+    margin-top: 6rem;
+    margin-left: 20rem;
+  }
+  .cart-amount{
+    margin-top: 2rem;
+    margin-left: 57rem;
+  }
+  .address-input{
+    padding: 15px;
+    border: 1px solid gray;
+    margin-top: 20px;
+    margin-left: 55rem;
+    border-radius: 5px;
+  }
+  .log-in{
+    margin-bottom: 2px;
+    margin-left: 60rem;
+  }
+  .log-in:hover{
+    border: 1px solid black;
+  }
