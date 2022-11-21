@@ -1,7 +1,10 @@
 const homeController = require('../app/controllers/homeController');
 const authController = require('../app/controllers/authController');
 const cartController = require('../app/controllers/customers/cartController');
+const orderController = require('../app/controllers/customers/orderController')
 const guest= require('../app/middlewares/guest')
+const auth = require('../app/middlewares/auth')
+const adminOrderController = require('../app/controllers/admin/orderController')
 
 function initRoutes(app){
   /* BEFORE
@@ -18,6 +21,14 @@ function initRoutes(app){
 
     app.get('/cart', cartController().index)
     app.post('/update-cart', cartController().update)
+
+    app.post('/orders', auth, orderController().store)
+
+    // customer order route
+    app.get('/customer/orders', auth, orderController().index)
+
+    // admin orders route
+    app.get('/admin/orders', adminOrderController().index)
 }
 
 module.exports = initRoutes;

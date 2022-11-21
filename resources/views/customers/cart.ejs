@@ -28,13 +28,28 @@
 
     <div>
         <h2 class="cart-amount font-bold text-lg">Total Amount: <span class="text-gray-600 font-bold text-xl">$ <%= session.cart.totalPrice %></span></h2>
-        <form action="">
-            <input class="address-input" type="text" placeholder="Address">
+
+
+        <% if(user) { %>
+
+        <form action="/orders" method="POST">
+            <input name="address" class="address-input" type="text" placeholder="Address">
+
             <div>
                 <!--<button type="submit" class="btn-primary log-in">Login to order</button>-->
                 <a><button type="submit" class="btn-primary log-in">Order Now</button></a>
             </div>
+
+
         </form>
+
+
+        <% } else { %>
+
+            <a href="/login" class="cart-log btn-primary">Login to continue</a>
+        <% } %>
+
+
     </div>
 
 <% } else {%>

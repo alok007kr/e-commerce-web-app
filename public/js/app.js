@@ -1,6 +1,48 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./resources/js/admin.js":
+/*!*******************************!*\
+  !*** ./resources/js/admin.js ***!
+  \*******************************/
+/***/ (() => {
+
+/*
+
+const { default: axios } = require("axios");
+
+function initAdmin(){
+    const orderTableBody = document.querySelector('#orderTableBody')
+
+    let orders = [] // defined order to having array of orders
+
+    let markup; // for html tabel in admin/orders page
+
+    axios.get('/admin/orders', {
+        headers: {
+            "X-Requested-With": "XMLHttpRequest"
+        }.then(res => {
+            orders = res.data
+            markup = generateMarkup(orders)
+            orderTableBody.innerHTML = markup
+        }).catch(err => {
+            console.log(`Error during Ajax call to fetch data for Admin ${err}`)
+        })
+    })
+
+
+    function generateMarkup(orders){
+        
+    }
+
+}
+
+module.exports = initAdmin
+
+*/
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -12,7 +54,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var noty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! noty */ "./node_modules/noty/lib/noty.js");
 /* harmony import */ var noty__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(noty__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _admin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./admin */ "./resources/js/admin.js");
+/* harmony import */ var _admin__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_admin__WEBPACK_IMPORTED_MODULE_2__);
 //console.log("Hello from the js")
+
 
 
 var addToCart = document.querySelectorAll('.add-to-cart');
@@ -43,6 +88,8 @@ addToCart.forEach(function (btn) {
     // console.log(phone)
   });
 });
+
+//initAdmin()
 
 /***/ }),
 

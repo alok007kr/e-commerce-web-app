@@ -131,3 +131,90 @@ nav .navbar{
   .log-in:hover{
     border: 1px solid black;
   }
+
+  .cart-log{
+    margin-top: 20px;
+    float: right;
+    margin-right: 18rem;
+  }
+  .cart-log:hover{
+    border: 1px solid black;
+  }
+
+
+  .cart-heading{
+    margin-top: 5rem;
+    margin-left: 13rem;
+  }
+
+  .order-table{
+    margin-top: 1px;
+    margin-left: 13rem;
+  }
+  .table-heading{
+    background: #C1C7C9;
+    color: black;
+    font-weight: bold;
+    font-size:larger;
+    padding: 1rem;
+  }
+  .table-row{
+    color: grey;
+    cursor: pointer;
+  }
+  table tr th{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    margin-bottom: 2px;
+  }
+  table tr td{
+    text-align: center;
+  }
+
+  .admin-order-head{
+    margin-left: 3rem;
+    margin-right: 3rem;
+    background:rgba(163, 162, 162, 0.801);
+  }
+  .order-id{
+    color:rgba(36, 34, 34, 0.89);
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .t-body td{
+    border-bottom: 1px solid #ddd;
+  }
+  .status-select{
+    border: 1px solid rgba(163, 162, 162, 0.801);
+    border-radius: 2px;
+  }
+  .about{
+    margin-top: 6rem;
+  }
+  .right-news{
+    margin-left: 20rem;
+  }
+  .right-news input{
+    background:rgba(0, 0, 0, 0.2);
+    padding: 10px 26px;
+  }
+  .sec-btn{
+    background: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 1px;
+    padding: 9px 14px;
+  }
+  .sec-btn:hover{
+    color: black;
+    background: white;
+    border: 1px solid rgba(163, 162, 162, 0.801);
+  }
+  .footer{
+    margin-top: 4rem;
+    background: black;
+    color: white;
+    justify-content: space-between;
+  }

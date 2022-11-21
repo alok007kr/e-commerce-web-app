@@ -59,10 +59,26 @@
     - also set that no one can visit login page using /login route manually. so, create a middleware guest.js
     - create logout post method in authController
 [+] Create Order controller and link it in server.js
-[+] Create Orders view with table for customer and admin
-[+] Place order functionality
-[+] Show all my orders on custormer orders page
-[+] Show orders on admin orders page
+    - set the login or order now button on condition
+    - make orderController
+    - make orders route in route file
+    - make order model
+    - write logic in orderController i.e. to create a order model to store the details of the order
+    - create a customer`s order route and page to display the customer order page
+    - write the logic in orderController get page , To fetch the order data from the database using await
+    - send orders data to frontend and display it through EJS
+[+] To format time to look good we use library
+    - moment
+[+] To make cart empty after order
+[+] To make auth middleware
+[+] Create Orders view with table for customer and admin //done above
+[+] Place order functionality  //done above
+[+] Show all my orders on custormer orders page  //done above
+[+] Show orders on admin orders page  
+    - To create own admin orderController and its routes to display all the order
+    - and send all orders data to frontEnd to display this data through Ajax call
+    - ******* 
+    - so create a admin,js file inside js folder and write the ajax call code for here and we access through the id
 [+] Change order status
 [+] Create Orders single page with status
 [+] Order tracker
@@ -70,3 +86,7 @@
         - dependancies socket.io
 [+] Build project for deployment
 [+] Deploy project on live server
+
+NOTE:
+  [+] Always try to put the session section above or just below the mongoDb connection
+  [+] Try to fetch the id, when you are logged in

@@ -1,0 +1,34 @@
+<section class="order-page">
+    <h1 class="cart-heading font-bold text-xl">All Orders</h1>
+    <div class="order-table">
+        <table>
+            <tr class="table-heading">
+                <th>Orders</th>
+                <th>Address</th>
+                <th>Time</th>
+            </tr>
+
+
+            <% if(orders.length) {%>
+                <% orders.forEach((order) => { %>
+
+                    <tr>
+                        <td class="table-row"> <%= order._id %> </td>
+                        <td> <%= order.address %> </td>
+                        <td> <%= moment(order.createdAt).format('hh:mm A') %> </td>
+                    </tr>
+
+                <% }) %>
+
+            
+            <% } else { %>
+                <tr>
+                    <td><span>No orders found!</span></td>
+                </tr>
+
+            <% } %>
+            
+        </table>
+    </div>
+    
+</section>

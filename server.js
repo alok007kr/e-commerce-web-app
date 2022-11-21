@@ -4,14 +4,16 @@ const app = express();
 const path = require('path')
 const ejs = require('ejs')
 const expressLayout = require('express-ejs-layouts')
-const PORT = process.env.PORT || 3003;
+const flash = require('flash')
+const PORT = process.env.PORT || 3009;
 const mongoose = require('mongoose')
 const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
 const passport = require('passport')
 
 // Database connection
-const url = 'mongodb://localhost/phone';
+//  const url = 'mongodb+srv://admin-alok:alok2021@cluster0.xefkarm.mongodb.net/phone';
+const url = 'mongodb://localhost:27017/phone';
 
 mongoose.connect(url,{useNewUrlParser: true, useUnifiedtopology:true})
 .then(() => {
@@ -53,6 +55,10 @@ app.use(express.static('public'))
 app.use(express.json())
 // To enable urlencoded data, i.e. sending from register form
 app.use(express.urlencoded({ extended: false}))
+
+
+// SetUp flash middleware
+app.use(flash());
 
 
 
