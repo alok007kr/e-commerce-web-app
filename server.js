@@ -12,8 +12,9 @@ const MongoDBStore = require('connect-mongodb-session')(session);
 const passport = require('passport')
 
 // Database connection
-const url = 'mongodb+srv://admin-alok:alok2021@cluster0.xefkarm.mongodb.net/phone';
+//const url = 'mongodb+srv://admin-alok:alok2021@cluster0.xefkarm.mongodb.net/phone';
 // const url = 'mongodb://localhost:27017/phone';
+const url = process.env.URL_SECRET;
 
 mongoose.connect(url,{useNewUrlParser: true, useUnifiedtopology:true})
 .then(() => {
